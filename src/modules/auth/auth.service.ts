@@ -69,7 +69,7 @@ class AuthService {
       payload: { id: user._id, email },
       secret_key: ACCESS_SECRET_KEY,
       options: {
-        expiresIn: "1day",
+        expiresIn: 60 * 5,
         jwtid,
       },
     });

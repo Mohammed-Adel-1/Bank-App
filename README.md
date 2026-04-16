@@ -59,32 +59,26 @@ Each transaction includes:
 
 ## 🔐 Security & Validation
 
-* ✅ Authentication باستخدام JWT
+* ✅ Authentication Using JWT
 * ✅ Password hashing
-* ✅ Validation باستخدام Zod:
+* ✅ Validation Using Zod:
 
   * Body
   * Params
   * Query
 * ✅ Rate limiting (express-rate-limit)
 * ✅ Secure headers (helmet)
-* ❌ لا يتم إرجاع بيانات حساسة مثل password
-* ❌ لا يمكن الوصول لحساب مستخدم آخر
+* ✅ Can Not Access Other User's Account
 
 ---
 
 ## ⚠️ Business Rules
 
-* كل مستخدم يمتلك حساب واحد فقط
-* لا يمكن تنفيذ عمليات على حساب:
-
-  * `inactive`
-  * `frozen`
-* لا يمكن السحب في حالة:
-
-  * insufficient balance
-* كل عملية يتم تسجيلها بالكامل (قبل وبعد الرصيد)
-* كل العمليات تتطلب تسجيل دخول
+* Every User Has Exactly One Account
+* Transactions Can Not Be Done on Inactive Account
+* Withdrawals And Transfers Can Not Be Done If The Account Balance Is Insufficient
+* Every Transaction Is Fully Recorded In The Database (Balance Before And After Transaction)
+* All The Transactions Require Login
 
 ---
 
@@ -217,8 +211,8 @@ Handled cases include:
 
 ## 📌 Notes
 
-* النظام مصمم ليكون بسيط وقابل للتطوير
-* يمكن إضافة:
+* The System Is Designed To Be Simple And Scalable
+* Can Be Added:
 
   * Notifications
   * Admin dashboard
