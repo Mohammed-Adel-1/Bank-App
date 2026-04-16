@@ -96,15 +96,6 @@ Each transaction includes:
 * Withdraw
 * Transfer
 
-### 3. Summary
-
-* Total deposits
-* Total withdrawals
-* Current balance
-
-### 4. Statement
-
-* Get transactions within a date range
 
 ---
 
@@ -173,11 +164,6 @@ Each transaction includes:
 
    * Deposit / Withdraw / Transfer
 5. Transactions are stored with full details
-6. User can:
-
-   * View history
-   * Filter by date
-   * Get financial summary
 
 ---
 
