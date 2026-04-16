@@ -1,5 +1,6 @@
 import mongoose from "mongoose";
 import * as z from "zod";
+import { bankAccountEnum } from "../../common/enum/bankAccount.enum";
 
 
 export const getAllMyTransactionsSchema = {
@@ -23,5 +24,12 @@ export const getOneTransactionSchema = {
 export const depositOrWithdrawSchema = {
     body: z.object({
         number: z.number().min(20).max(4000)
+    })
+};
+
+export const transferSchema = {
+    body: z.object({
+        number: z.number().min(20).max(4000),
+        accountNumber: z.string(),
     })
 };
